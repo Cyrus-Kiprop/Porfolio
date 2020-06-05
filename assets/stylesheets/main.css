@@ -5,7 +5,119 @@
 :root {
   --bg-dark: #161922;
   --main-txt-clr: #646583;
+  --sec-color: #FEDC7B;
+  --btn-border: #959595;
 }
+
+/* Header styling */
+header {
+  background-color: var(--bg-dark);
+  height: 95px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  padding: 0 2.5rem;
+}
+
+.logo {
+  font-weight: 1000;
+  font-size: 35px;
+  color: var(--sec-color);
+}
+
+header ul {
+  display: flex;
+}
+
+header ul li {
+  padding: .5rem;
+}
+
+header ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  padding-bottom: 3px;
+  transition: border-width 0.3s linear;
+
+}
+
+header ul li a:hover {
+  border-bottom: 5px solid var(--sec-color);
+  border-with: 3rem;
+}
+
+header .hire-me {
+  background-color: white;
+  padding: .3rem 1.7rem;
+  display: flex;
+  align-items: center;
+  border-radius: 25px;
+  font-size: 18px;
+  font-weight:700;
+  border: 3px solid var(--btn-border);
+  transition: all 0.3s ease-in;
+}
+
+.hire-me:hover {
+  background-color: var(--sec-color);
+}
+
+.hire-me img {
+  height: 1rem;
+  outline: none;
+  width: 1rem;
+  margin-left:  5px;
+}
+
+.hamburger {
+  background-color: transparent;
+  border: none;
+
+  display: none;
+}
+
+.hamburger img {
+  height: 30px;
+  width: 30px;
+}
+/* Header responsiveness */
+@media only screen and (max-width: 768px) {
+  header ul, .hire-me  {
+    display: none !important;
+  }
+
+  .logo {
+    font-size: 26px;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 568px) {
+  header {
+    flex-direction: row-reverse;
+    padding: 0 .5rem;
+  }
+
+  .logo {
+      display: none;
+      }
+
+  }
+
+
+main {
+  height: 5rem;
+}
+
+
 footer {
   display: flex;
   flex-direction: column;
