@@ -1,0 +1,51 @@
+/* some fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+
+/* color variables */
+:root {
+  --bg-dark: #161922;
+  --main-txt-clr: #646583;
+}
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--bg-dark);
+  color: var(--main-txt-clr);
+  font-size: 12px;
+  justify-content: center;
+  padding: 1rem .25rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+
+}
+
+footer p {
+  text-align: center;
+  word-wrap: break-word;
+  margin-top:.25rem;
+}
+
+footer span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+footer span time {
+  margin-right: .2rem;
+}
+
+footer span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+footer span img {
+  height: 20px;
+  width: 20px;
+}
