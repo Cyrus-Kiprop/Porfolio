@@ -51,8 +51,9 @@ header ul li a {
 }
 
 header ul li a:hover {
-  border-bottom: 5px solid var(--sec-color);
-  border-width: 3rem;
+  border-bottom: 2px solid var(--sec-color);
+  border-width: 0.3rem;
+  text-decoration: none;
 }
 
 header .hire-me {
