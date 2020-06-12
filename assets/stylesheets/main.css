@@ -419,6 +419,21 @@ main {
   font-size: 12px;
 }
 
+.featured-works-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+@media screen and (max-width: 992px) {
+  .featured-works-container {
+    grid-template-columns: 1fr;
+  }
+
+  .featured-works-item .card-img-top {
+    min-height: auto !important;
+  }
+}
+
 .featured-works {
   background-color: var(--bg-dark);
   padding: 4rem 0;
@@ -457,6 +472,10 @@ main {
 .featured-works-item .card span {
   color: #6deae6;
   margin-bottom: 0.3rem;
+}
+
+.featured-works-item .card-img-top {
+  min-height: 400px;
 }
 
 .featured-works-item .card-body .card-text {
@@ -542,6 +561,7 @@ main {
   box-shadow: 0 0 2px 3px #171a23;
   transition: all 0.2s ease-in;
   margin-bottom: 1.25rem;
+  min-height: 180px;
 }
 
 @media only screen and (max-width: 500px) {
@@ -627,6 +647,10 @@ span.header-wrapper > p {
   padding: 2rem 0.9rem;
   margin: 0 10px 10px;
   transition: all 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 321px;
 }
 
 .testimonials-item:hover {
@@ -739,7 +763,8 @@ span.header-wrapper > p {
 .ask-client p {
   margin-bottom: 1.3rem;
   font-weight: 600;
-  font-size: 12px;
+  font-size: 16px;
+  text-align: center;
 }
 
 .ask-client h3 {
@@ -934,6 +959,18 @@ span.header-wrapper > p {
   }
 }
 
+.testimonials-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media screen and (max-width: 992px) {
+  .testimonials-wrapper {
+    margin-left: 1rem !important;
+    margin-right: 1rem !important;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .contact-info {
     padding: 1rem;
@@ -943,8 +980,8 @@ span.header-wrapper > p {
     margin: 1rem;
   }
 
-  .testimonials-item {
-    margin: auto;
+  .testimonials-wrapper {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .contact-me {
@@ -975,6 +1012,18 @@ span.header-wrapper > p {
   .teaser p {
     font-size: 1.25rem;
     max-width: 500px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .testimonials-wrapper {
+    grid-template-columns: 1fr;
+    margin: 0 !important;
+    padding: 4px;
+  }
+
+  .ask-client h3 {
     text-align: center;
   }
 }
